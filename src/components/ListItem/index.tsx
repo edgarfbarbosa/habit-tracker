@@ -1,3 +1,4 @@
+import './styles.css'
 import { Item } from '../../types/item'
 
 type Props = {
@@ -6,8 +7,9 @@ type Props = {
 
 const ListItem = ({ item }: Props) => {
     return (
-        <div>
-            {item.name}
+        <div className="list-item__container">
+            <input type="checkbox"></input>
+            <label>{item.name}</label>
         </div>
     )
 }
