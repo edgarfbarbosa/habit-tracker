@@ -1,6 +1,7 @@
-import './styles.css'
 import { useState } from 'react'
 import { Item } from '../../types/item'
+
+import styles from './ListItem.module.css'
 
 type Props = {
     item: Item
@@ -10,7 +11,7 @@ const ListItem = ({ item }: Props) => {
     const [isChecked, setIsChecked] = useState(item.done)
 
     return (
-        <div className="list-item__container">
+        <div className={styles['list-item__container']}>
             <input
                 type="checkbox"
                 checked={isChecked}
